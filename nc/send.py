@@ -11,6 +11,7 @@ def main():
 
 def send(msg, port):
     print("sending {} to {}".format(msg, port))
-    os.system("echo {} | nc 172.17.0.1 {}".format(msg, port))
+
+    os.system("echo {msg}|nc -q 1 {host} {port}".format(msg=msg, host="listen", port=port))
 
 main()
