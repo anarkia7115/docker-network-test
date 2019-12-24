@@ -7,7 +7,7 @@ def main():
         listen_on_port(port)
 
 def listen_on_port(port):
-    os.system("nc -l 172.17.0.1 {}".format(port))
+    os.system("nc -lp {}".format(port))
 
 main()
     
